@@ -1,0 +1,35 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.container-fluid {
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+	.destroy_form {
+		display: inline-block;
+	}
+
+	.show_label {
+		font-weight: bold;
+	}
+
+	.error {
+		color: red;
+		font-size: .85em;
+		font-style: italic;
+		margin-left: 10px;
+	}
+
+	.success {
+		color: green;
+		font-size: .85em;
+		font-style: italic;
+		margin-left: 10px;
+	}

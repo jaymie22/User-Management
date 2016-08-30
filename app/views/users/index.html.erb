@@ -1,0 +1,35 @@
+<div class="container-fluid">
+	<h1>Listing Users</h1>
+
+	<div class="table-responsive">
+		<table class="table table-hover table-condensed">
+			<thead>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Actions</th>
+			</thead>
+			<tbody>
+				<% @users.each do |user| %>
+				<tr>	
+					<td><%= user.first_name %></td>
+					<td><%= user.last_name %></td>
+					<td><%= user.email %></td>
+					<td>
+						<a href="/users/<%= user.id %>" class="btn btn-primary">Show</a>	
+						<a href="/users/<%= user.id %>/edit" class="btn btn-success">Edit</a>
+						<form action="/users/<%= user.id %>" method="post" class="destroy_form" class="delete_form">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+							<input type="hidden" name="_method" value="delete">
+							<input type="submit" value="Destroy" class="btn btn-danger">
+						</form>
+					</td>	
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+
+	<a href="/new">New User</a>
+
+<div class="container-fluid">

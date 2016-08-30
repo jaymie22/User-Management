@@ -1,0 +1,10 @@
+<div class="container-fluid">
+	<h1>User's Information</h1>
+	<p><span class="show_label">First Name:</span> <%= @users.first_name %></p>
+	<p><span class="show_label">Last Name:</span> <%= @users.last_name %></p>
+	<p><span class="show_label">Email Address:</span> <%= @users.email %></p>
+
+	<a href="/">Go Back</a>
+	<a href="/users/<%= @users.id %>/edit">Edit</a>
+
+</div>
